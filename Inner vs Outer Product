@@ -1,0 +1,28 @@
+# Understanding the Geometry of Matrix Multiplication: Inner vs. Outer Products
+
+Matrix multiplication appears mechanical on the surface—multiply elements, sum them up, done. 
+But beneath this computational routine lies profound geometric meaning that illuminates how vectors interact in space and how linear transformations reshape dimensions. 
+The distinction between multiplying a row vector by a column vector (inner product) versus a column vector by a row vector (outer product) reveals fundamentally 
+different operations that serve distinct purposes in linear algebra and its applications.
+
+
+Before diving into the abstract mathematics, consider a practical scenario: a user-item matrix in recommendation systems. 
+Imagine a streaming service where rows represent users and columns represent movies. Each entry contains a rating (or 0 for unrated items):
+
+|        | Movie 1 | Movie 2 | Movie 3 |
+| ------ | ------- | ------- | ------- |
+| User 1 | 5       | 0       | 4       |
+| User 2 | 3       | 4       | 0       |
+| User 3 | 0       | 5       | 2       |
+
+This is where things start to get interesting. If you take a deep look at the tables, you will realize that in each row or column, there is an unrated item. 
+If you already had some kind of relationship with linear algebra, you might wondering a few things: 
+
+1. Could I collapse these 3 dimensional vectors into 2 dimensional vectors?
+2. How to map the similarity between each user? How biased would it be? 
+3. Could I map the similarity between each Movie with this current table? How biased would it be? 
+4. Deeply What each row means? And each column? 
+5. What storytelling this table can tell us? 
+
+
+
